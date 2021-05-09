@@ -1,0 +1,72 @@
+<app-header></app-header>
+<mat-drawer-container class="example-container">
+   <mat-drawer mode="side" opened class="app-sidebar">
+      <app-sidebar></app-sidebar>
+   </mat-drawer>
+   <mat-drawer-content>
+      <div class="main-content">
+         <div class="container-fluid">
+            <div class="row align-item-center">
+               <div class="col-12">
+                  <div class="page-title-box">
+                     <h4 class="mb-0">Dashboard</h4>
+                     <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                           <li class="breadcrumb-item"><a href="">Home</a></li>
+                           <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container-fluid">
+               <div class="row table-content">
+                  <div class="col-12 mat-elevation-z8">
+                     
+                     <table mat-table [dataSource]="dataSource" matSort>
+                        <ng-container matColumnDef="Id">
+                           <th mat-header-cell *matHeaderCellDef mat-sort-header> SR No </th>
+                           <td mat-cell *matCellDef="let row; let i = index;">{{ i + 1 }}</td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Name">
+                           <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                           <td mat-cell *matCellDef="let row"> {{row.firstname}}   {{row.lastname}} </td>
+                        </ng-container>
+                       
+                        <ng-container matColumnDef="Mobile number">
+                           <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile number </th>
+                           <td mat-cell *matCellDef="let row"> {{row.mobilenumber | phoneFormat }} </td>
+                        </ng-container>
+                        
+                        <ng-container matColumnDef="DOB">
+                           <th mat-header-cell *matHeaderCellDef mat-sort-header> DOB </th>
+                           <td mat-cell *matCellDef="let row"> {{row.dob | date:'yyyy-dd-MM'}} </td>
+                        </ng-container>
+                       
+                        <ng-container matColumnDef="Gender">
+                           <th mat-header-cell *matHeaderCellDef mat-sort-header> Gender </th>
+                           <td mat-cell *matCellDef="let row"> {{row.gender | titlecase}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="action">
+                           <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+                           <td mat-cell *matCellDef="let row">
+                              <a>
+                                 <mat-icon color="primary" (click)="editData(row)" class="edit-icon">edit</mat-icon>
+                              </a>
+                              <a>
+                                 <mat-icon class="view-icon" (click)="navigate(row)">remove_red_eye</mat-icon>
+                              </a>
+                           </td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

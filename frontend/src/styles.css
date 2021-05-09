@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-icon {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  .mat-list-item.sidebar-list:hover {
+    background: #673ab7 !important;
+    color: #fff !important;
+  }
+  .example-container {
+	min-height: 620px !important;
+	width: 100% !important;
+}
+.main-content {
+	background-color: #fafafa;
+}
+
+.app-sidebar {
+	background-color: #ffff;
+	height: 100%;
+	width: 225px !important;
+}
+
+table {
+	width: 100%;
+}
+
+.main-content {
+	margin: 40px 35px;
+}
+
+.page-title-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center!important;
+}
+.page-title-box .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+}
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: .75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #f5f6f8;
+  border-radius: .25rem;
+}
+.breadcrumb-item {
+  display: flex;
+}
+.breadcrumb-item.active {
+  color: #673ab7;
+}
+.breadcrumb-item+.breadcrumb-item {
+  padding-left: .5rem;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  display: inline-block;
+  padding-right: .5rem;
+  color: #673ab7;
+  content: "/";
+}
+.page-title-box h4 {
+  font-weight: 500;
+  font-size: 20px!important;
+  color: #495057;
+}
+.breadcrumb-item>a {
+  color: #495057;
+}
+.edit{
+  border-radius: 20% !important;
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 18px;
+}
+.view{
+  border-radius: 20% !important;
+    width: 34px !important;
+    height: 34px !important;
+    
+}
+.edit-icon{
+  font-size: 18px;
+  color: #fff !important;
+}
+.view-icon{
+  font-size: 18px;
+  color: #fff !important;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;  
+}
+.col-md-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.form-div{
+    margin-bottom: 1rem;
+}
+.full-width-input{
+    width: 80%;
+}
+.mt-3{
+    margin-top: 1rem!important;
+}
+.text-right{
+    float: right;
+}
+.col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.text-right {
+    text-align: right!important;
+  }
+  .mt-3, .my-3 {
+    margin-top: 1rem!important;
+  }
+  .ml-15{
+    margin-left: 15px !important;
+  }
+  .form-label{
+    color: #74788d!important;
+  }

@@ -1,0 +1,105 @@
+
+.auth-row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center!important;
+  justify-content: center!important;
+}
+.auth-section{
+  background-color: rgba(91,140,232,.25);
+  background-color: rgba(91,140,232,.25);
+  padding-top: 7.8rem;
+  padding-bottom: 7.8rem;
+}
+.auth-container{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+div{
+  display: block;
+  width: 100%;
+}
+.head-section{
+  position: relative;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.text-center{
+  text-align: center!important;
+}
+.heading-block{
+  margin-bottom: 3rem!important;
+  display: block!important;
+}
+.heading{
+  font-size: 30px;
+    margin: 0 auto;
+    color: #673ab7!important;
+    font-weight: 500;
+    line-height: 40px;
+}
+.login-block{
+  flex: 0 0 33.3337%;
+  max-width: 33.3337%;
+  position: relative;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.auth-card{
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgb(15 34 58 / 12%);
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid #f6f6f6;
+    border-radius: .25rem;
+}
+.card-body{
+  padding: 1.5rem!important;
+  -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+.mt-2, .my-2 {
+  margin-top: .5rem!important;
+}
+.text-primary {
+  color: #673ab7!important;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.125rem;
+
+}
+.text-muted {
+  color: #74788d!important;
+  margin-top: 0;
+    margin-bottom: 1rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.p-2 {
+  padding: .5rem!important;
+}
+.mt-4, .my-4 {
+  margin-top: 1.5rem!important;
+}
+form {
+  display: block;
+  margin-top: 0em;
+}
+.mat-form-field{
+  width: 100% !important;
+}

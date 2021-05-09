@@ -1,0 +1,130 @@
+<div class="auth-section my-5 pt-sm-5">
+  <div class="container auth-container">
+    <div class="auth-row">
+      <div class="head-section">
+        <div class="text-center heading-block">
+          <h3 class="heading">Assignment</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row auth-row">
+      <div class="login-block">
+        <mat-card class="auth-card">
+          <mat-card-content class="card-body">
+            <div class="text-center mt-2">
+              <h3 class="text-primary">Welcome to Panel</h3>
+              <p class="text-muted">Sign in to continue to Panel</p>
+            </div>
+            <div class="p-2 mb-2 mt-4">
+              <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+                <mat-error *ngIf="errorMsg">
+                  Email Already Existed
+                </mat-error>
+                <div class="form-block">
+                  <mat-form-field class="full-width-input">
+                    <input matInput placeholder="First Name" formControlName="firstname" required>
+                    <mat-error *ngIf="errorHandling('firstname', 'required')">
+                      You must provide a First Name
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div class="form-block mt-2">
+                  <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Last Name" formControlName="lastname" required>
+                    <mat-error *ngIf="errorHandling('lastname', 'required')">
+                      You must provide a Last Name
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div class="form-block mt-2">
+                  <label class="form-label">Gender: </label>
+                  <mat-radio-group formControlName="gender" color="primary">
+                    <mat-radio-button class="ml-15" value="male">Male</mat-radio-button>
+                    <mat-radio-button class="ml-15" value="female">Female</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <div class="form-block mt-2">
+                  <mat-form-field color="primary">
+                    <mat-label>Select Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker2" formControlName="dob">
+                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2 color="primary"></mat-datepicker>
+
+                  </mat-form-field>
+                </div>
+
+                <div class="form-block mt-2">
+                  <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Mobile Number" formControlName="mobilenumber" required>
+                    <mat-error *ngIf="errorHandling('mobilenumber', 'required')">
+                      You must provide a Mobile Number
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('mobilenumber', 'minlength')">
+                      Phone Number must be at least 10 Numbers
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div class="form-block  mt-2">
+                  <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="email" required>
+                    <mat-error *ngIf="errorHandling('email', 'required')">
+                      You must provide a Email
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('email', 'email')">
+                      Email must be a valid email address
+                    </mat-error>
+                  </mat-form-field>
+
+                </div>
+
+                <div class="form-block  mt-2">
+                  <mat-form-field class="full-width-input">
+                    <input matInput type="password" placeholder="Password" formControlName="password" required>
+                    <mat-error *ngIf="errorHandling('password', 'required')">
+                      You must provide a Password
+                    </mat-error>
+                    <mat-error *ngIf="errorHandling('password', 'minlength')">
+                      Password must be at least 6 characters
+                    </mat-error>
+
+                  </mat-form-field>
+                </div>
+
+                <div class="form-block  mt-2">
+                  <mat-form-field class="full-width-input">
+                    <input matInput type="password" placeholder="Confirm Password" formControlName="confirmpassword"
+                      required>
+                    <mat-error *ngIf="errorHandling('confirmpassword', 'required')">
+                      You must provide a Confirm Password
+                    </mat-error>
+                    
+                  </mat-form-field>
+                </div>
+
+                <div class="form-block mt-2">
+                  <label class="form-label">Role: </label>
+                  <mat-radio-group formControlName="roles" color="primary">
+                    <mat-radio-button class="ml-15" value="users">User</mat-radio-button>
+                    <mat-radio-button class="ml-15" value="admin">Admin</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                  <div class="form-block mt-3 text-right">
+                    <button mat-raised-button color="primary" [disabled]="myForm.invalid">Register</button>
+                  </div>
+                  <div class="form-block mt-3">
+                    <p class="text-muted text-center">Already have a acoount <a [routerLink]="['/auth/login']">Sign In</a> here</p>
+                  </div>
+
+              </form>
+            </div>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+</div>

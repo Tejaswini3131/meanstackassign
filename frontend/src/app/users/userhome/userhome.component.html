@@ -1,0 +1,103 @@
+<app-header></app-header>
+<mat-drawer-container class="example-container">
+   <mat-drawer mode="side" opened class="app-sidebar">
+      <app-sidebar></app-sidebar>
+   </mat-drawer>
+   <mat-drawer-content>
+      <div class="main-content">
+         <div class="container-fluid">
+            <div class="align-item-center">
+               <div class="col-12">
+                  <div class="page-title-box">
+                     <h4 class="mb-0">User Dashboard</h4>
+                     <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                           <li class="breadcrumb-item"><a href="">Home</a></li>
+                           <li class="breadcrumb-item active">User Dashboard</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class=" mat-elevation-z8">
+               <mat-card class="auth-card">
+                  <mat-card-content class="card-body">
+                     <div *ngIf="userForm">
+                        <form [formGroup]="userForm" novalidate>
+                           <p *ngIf="isEdited">
+                              Data Updated Successfully
+                           </p>
+                           <mat-error *ngIf="errorMsg">
+                              Email Already Existed
+                           </mat-error>
+                           <div class="row">
+                              <div class="col-md-6 form-div">
+                                 <div class="form-block mt-2">
+                                    <mat-form-field class="full-width-input">
+                                       <input matInput placeholder="First Name" formControlName="firstname" required>
+                                    </mat-form-field>
+                                 </div>
+                              </div>
+                              <div class="col-md-6 form-div">
+                                 <div class="form-block mt-2">
+                                    <mat-form-field class="full-width-input">
+                                       <input matInput placeholder="Last Name" formControlName="lastname" required>
+                                    </mat-form-field>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="row">
+                              <div class="col-md-6 form-div">
+                                 <div class="form-block mt-2">
+                                    <label class="form-label">Gender: </label>
+                                    <mat-radio-group formControlName="gender" color="primary">
+                                       <mat-radio-button class="ml-15" value="male">Male</mat-radio-button>
+                                       <mat-radio-button class="ml-15" value="female">Female</mat-radio-button>
+                                    </mat-radio-group>
+                                 </div>
+                              </div>
+                              <div class="col-md-6 form-div">
+                                 <div class="form-block mt-2">
+                                    <mat-form-field color="accent" class="full-width-input">
+                                       <mat-label>Select Date of Birth</mat-label>
+                                       <input matInput [matDatepicker]="picker2" formControlName="dob">
+                                       <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                       <mat-datepicker #picker2 color="primary"></mat-datepicker>
+
+                                    </mat-form-field>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="row">
+                              <div class="col-md-6 form-div">
+                                 <div class="form-block mt-2">
+                                    <mat-form-field class="full-width-input">
+                                       <input matInput placeholder="Mobile Number" formControlName="mobilenumber"
+                                          required>
+                                    </mat-form-field>
+                                 </div>
+                              </div>
+                              <div class="col-md-6 form-div">
+                                 <div class="form-block mt-2">
+                                    <mat-form-field class="full-width-input">
+                                       <input matInput placeholder="Email" formControlName="email" required>
+                                    </mat-form-field>
+                                 </div>
+                              </div>
+                           </div>
+
+
+                        </form>
+                     </div>
+                  </mat-card-content>
+               </mat-card>
+            </div>
+
+         </div>
+      </div>
+   </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

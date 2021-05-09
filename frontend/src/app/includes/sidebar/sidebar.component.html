@@ -1,0 +1,18 @@
+<mat-nav-list>
+    <div *ngIf="userRole">
+        <a mat-list-item class="sidebar-list" routerLinkActive="list-item-active" routerLink="['/user/dashboard']">
+            <mat-icon>home</mat-icon>
+            User Home
+        </a>
+    </div>
+    <div *ngIf="!userRole">
+        <a mat-list-item class="sidebar-list" routerLinkActive="list-item-active" routerLink="['/admin/dashboard']">
+            <mat-icon>home</mat-icon>
+            Dashboard
+        </a>
+    </div>
+    <a mat-list-item class="sidebar-list" routerLinkActive="list-item-active" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>Logout
+    </a>
+
+</mat-nav-list>
